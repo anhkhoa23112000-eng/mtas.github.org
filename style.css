@@ -1,0 +1,331 @@
+/* ======== CÀI ĐẶT CHUNG (Giống lehuythai.com) ======== */
+:root {
+    --color-background: #121212; /* Nền tối chính */
+    --color-background-secondary: #1a1a1a; /* Nền tối phụ */
+    --color-text-primary: #f0f0f0; /* Chữ chính */
+    --color-text-secondary: #a0a0a0; /* Chữ phụ, mô tả */
+    --color-accent: #007bff; /* Màu nhấn (xanh dương) */
+    --color-accent-hover: #0056b3;
+    --color-border: #333333;
+}
+
+/* Thiết lập cơ bản */
+html {
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt khi bấm menu */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+/* Tiêu đề và văn bản */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lớp tiện ích */
+.section-container {
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: 0 auto; /* Căn giữa */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dark-bg {
+    background-color: var(--color-background-secondary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Nút CTA (Call to Action) */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Bo tròn */
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-accent);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button.primary {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+.cta-button.primary:hover {
+    background-color: var(--color-accent-hover);
+}
+.cta-button.large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+
+/* ======== 1. THANH ĐIỀU HƯỚNG ======== */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    background-color: rgba(18, 18, 18, 0.9); /* Nền mờ khi cuộn */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links .cta-button {
+    color: #ffffff !important;
+}
+
+/* ======== 2. PHẦN GIỚI THIỆU (HERO) ======== */
+.hero {
+    padding: 60px 8%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột 50/50 */
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text .slogan {
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero-text .description {
+    font-size: 1.1rem;
+    margin: 20px 0 30px;
+    color: var(--color-text-secondary);
+}
+
+.hero-image img {
+    border-radius: 15px;
+    /* Bạn có thể thêm hiệu ứng cho ảnh ở đây */
+}
+
+/* ======== 3. GIẢI PHÁP (Services) ======== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Lưới 3 cột */
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nhấc lên */
+    border-color: var(--color-accent);
+}
+
+.card-icon {
+    width: 50px; /* Đặt kích thước cho icon */
+    height: 50px;
+    margin-bottom: 20px;
+    /* Hãy tạo các icon 50x50px, nền trong suốt */
+}
+
+.card h3 {
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+/* ======== 4. SẢN PHẨM (Skills) ======== */
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Lưới 2 cột */
+    gap: 40px;
+}
+
+.product-category h3 {
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.product-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-category li {
+    background-color: var(--color-background);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+/* ======== 5. QUY TRÌNH (Workflow) ======== */
+.workflow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.step-content h3 {
+    margin: 0 0 5px 0;
+    color: #ffffff;
+}
+.step-content p {
+    margin: 0;
+}
+
+/* ======== 6. LIÊN HỆ (Contact) ======== */
+.footer {
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.contact-details {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+.contact-details p {
+    margin: 5px 0;
+    line-height: 1.8;
+}
+
+.contact-details strong {
+    color: var(--color-text-primary);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+
+/* ======== THIẾT KẾ CHO DI ĐỘNG (Responsive) ======== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+
+    /* Ẩn menu chữ, bạn có thể thay bằng icon 3 gạch sau */
+    .nav-links {
+        display: none; 
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+        text-align: center;
+    }
+    .hero-image {
+        grid-row: 1; /* Đẩy ảnh lên đầu */
+        margin-bottom: 20px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 cột */
+    }
+
+    .product-list {
+        grid-template-columns: 1fr; /* 1 cột */
+    }
+}
